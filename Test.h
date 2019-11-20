@@ -16,6 +16,8 @@ class Test{
     void run();
     
     std::string test1();
+    std::string test2();
+    std::string test3();
 
     private:
 
