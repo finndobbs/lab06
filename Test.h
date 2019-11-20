@@ -12,12 +12,13 @@ class Test{
     Test();
 
     ~Test();
+
+    void run();
     
-    bool test1();
+    std::string test1();
 
     private:
 
-    Queue queue;
 };
 
 #endif

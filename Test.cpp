@@ -5,24 +5,27 @@
 #include "Queue.h"
 
 Test::Test() {
-    std::ofstream outfile;
-    outfile.open("test_log.out", std::ios::out | std::ios::app);
-
-    outfile << "Tests:" << newl
-            << "\t1: new Queue is empty" << newl
-            << "\t2: Enqueuing makes Queue nonempty" << newl
-            << "\t3: Enqueuing x on empty queue then peekFront returns x" << newl;
-
-
-    outfile.close();
-
-    Queue queue;
 }
 
 Test::~Test(){
 
 }
+void Test::run(){
+    std::ofstream outfile;
+    outfile.open("test_log.out", std::ios::out | std::ios::app);
 
-bool Test::test1(){
+    outfile << "Tests:" << std::endl
+            << "\t1: new Queue is empty" << std::endl
+            << "\t2: Enqueuing makes Queue nonempty" << std::endl
+            << "\t3: Enqueuing x on empty queue then peekFront returns x" << std::endl;
 
+    outfile << Test::test1();
+    outfile.close();
+}
+
+std::string Test::test1(){
+    std::string result = "";
+    result = "Test 1: Newly created Queue is empty: ";
+    result += "PASS/FAIL";
+    return result;
 }
